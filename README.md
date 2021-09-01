@@ -1,4 +1,4 @@
-# Operator Calc
+# Operator Calculator
 A calculator which can do calculations in a very intuitive UI.
 -------------------------------------------------------------------
 You need to install `Colorama 0.4.4` using pip.

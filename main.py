@@ -15,7 +15,7 @@ def start():
     print(Fore.CYAN + 'Welcome to the Calculator Navigation Wizard. ' + Fore.WHITE + '(Developed by Bedanta Dey)')
     print('Type ' + Fore.GREEN + 'r ' + Fore.WHITE + 'to run the program, ' + Fore.GREEN + 'h ' + Fore.WHITE + 'for help, or ' + Fore.GREEN + 'q ' + Fore.WHITE + 'to exit.')
 
-    run = input()
+    run = input('> ')
     
     if run == 'r':
         clear()
@@ -36,7 +36,7 @@ def start():
         print("4. For calculations that involve more than 2 numbers, try calculating the value of them first, then involve")
         print("   them with the final calculation. This is done to prevent invalid results like 'Can't divide by zero'.")
     
-        cont = input('Press ' + Fore.GREEN + 'c ' + Fore.WHITE + 'to continue to the program. ')
+        cont = input('Press ' + Fore.GREEN + 'c ' + Fore.WHITE + 'to continue to the program. > ')
     
     else:
         print(Fore.RED + "Encountered an error. Closing the program... (Wizard Error: 2) [Exiting in 3...]")
@@ -60,11 +60,11 @@ def main():
 
     print(Fore.BLUE + "Enter your first number: "+ Fore.WHITE)
 
-    num1 = int(input())
+    num1 = int(input('> '))
 
     print(Fore.BLUE + "Enter your second number: "+ Fore.WHITE)
 
-    num2 = int(input())
+    num2 = int(input('> '))
 
     print(Fore.BLUE + "Choose your operator:")
     print(Fore.GREEN + "a " + Fore.WHITE+ 'for Addition (+)')
@@ -75,7 +75,7 @@ def main():
     print(Fore.GREEN + "e " + Fore.WHITE+ "for Exponentiation (^)")
     print(Fore.GREEN + "fd " + Fore.WHITE+ "for Floor Division (//)")
 
-    oper = input()
+    oper = input('> ')
 
     if oper == 'a':
         add = num1 + num2
@@ -111,7 +111,7 @@ def main():
     else:
         print(Fore.RED + "Encountered an error. Try again. (Wizard Error: 1)")
 
-    restart = input(Fore.WHITE +'Do you want to run the wizard again? [' + Fore.GREEN + 'y ' + Fore.WHITE + 'for Yes' + Fore.WHITE + ', ' + Fore.GREEN + 'n ' + Fore.WHITE + 'for No.] ' + Fore.WHITE)
+    restart = input(Fore.WHITE +'Do you want to run the wizard again? [' + Fore.GREEN + 'y ' + Fore.WHITE + 'for Yes' + Fore.WHITE + ', ' + Fore.GREEN + 'n ' + Fore.WHITE + 'for No.] > ' + Fore.WHITE)
 
     if restart == 'y':
         clear()
@@ -124,7 +124,7 @@ def main():
         exit()
 
     else:
-        print(Fore.RED + "Encountered an error. Closing the program... (Wizard Error: 2) [Exiting in 3...]")
+        print(Fore.RED + "Encountered a FATAL error. Closing the program... (Wizard Error: 2) [Exiting in 3...]")
         time.sleep(3)
         exit()
 
